@@ -8,12 +8,10 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body>
-    <nav>
-        <h1>This is Nav</h1>
-    </nav>
+    @include('layouts.partials.nav')
+    <main class="page">
     @yield('content')
-    <footer>
-        <h2>Footer</h2>
-    </footer>
+    </main>
+    @include('layouts.partials.footer')
 </body>
 </html>

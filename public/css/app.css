@@ -8,3 +8,90 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+.menu {
+  background: #dfbf9f;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 25px 5px 5px;
+}
+.menu .logo {
+  height: 46px;
+}
+.menu ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  gap: 30px;
+}
+.menu ul li a {
+  color: #66ff33;
+  height: 46px;
+  width: 46px;
+  line-height: 46px;
+  font-size: 22px;
+  background: #009900;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease-in-out;
+  position: relative;
+}
+.menu ul li a .info-count {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #336600;
+  display: flex;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(20%, -20%);
+}
+.menu ul li a:hover {
+  background: #003300;
+  color: #ccffcc;
+}
+
+.home-header {
+  background: #006600;
+  padding: 100px 25px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home-header .home-header-text {
+  text-align: center;
+  color: #fff;
+}
+.home-header .home-header-text .title {
+  font-size: 40px;
+  font-weight: 700;
+}
+.home-header .home-header-text .tagline {
+  font-size: 25px;
+  font-weight: 400;
+}
+.home-header .home-header-search {
+  margin-top: 20px;
+}
+.home-header .home-header-search input {
+  width: 600px;
+  max-width: 100%;
+  border-radius: 300px;
+  text-align: center;
+  padding: 15px 25px;
+  border: 6px solid #00cc00;
+}
+.home-header .home-header-search input:focus {
+  outline: none;
+}
