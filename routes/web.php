@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
@@ -35,13 +36,20 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout')->middl
 Route::group(['prefix'=> 'adminpanel', 'middleware' => 'admin'], function(){
     //dashboard
     Route::get('/', [AdminController::class, 'dashboard'])->name('adminpanel');
-    
+
     //products
     Route::group(['prefix' => 'products'], function(){
-    Route::get('/', [ProductController::class, 'index'])->name('adminpanel.products');
-    Route::get('/create', [ProductController::class, 'create'])->name('adminpanel.create');
-    Route::post('/create', [ProductController::class, 'store'])->name('adminpanel.store');
+        Route::get('/', [ProductController::class, 'index'])->name('adminpanel.products');
+        Route::get('/create', [ProductController::class, 'create'])->name('adminpanel.create');
+        Route::post('/create', [ProductController::class, 'store'])->name('adminpanel.store');
     });
+
+    //categories
+    Route::group(['prefix' => 'categories'], function(){
+        Route::get('/', [CategoryController::class, 'index'])->name('adminpanel.categories');
+        Route::post('/', [CategoryController::class, 'store'])->name('adminpanel.category.store');
+     });
+    
 
 });
 
