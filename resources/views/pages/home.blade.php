@@ -5,5 +5,11 @@
 
     @include('pages.components.home.header')
 
+    @auth
+        <form action="{{route('logout')}}" method="post">
+            <button class="btn btn-primary">LOGOUT</button>
+        </form>
+    @endauth
+
     </main>
 @endsection
