@@ -27,6 +27,12 @@ class CategoryController extends Controller
         $category->save();
 
         //return response
-        return back()->with('Success', 'Category Saved');
+        return back()->with('success', 'Category Saved');
+    }
+
+    public function destroy($id)
+    {
+        Category::findOrFail($id)->delete();
+        return back()->with('success', 'Category Deleted');
     }
 }
