@@ -5,16 +5,16 @@
     </div>
     <ul>
         <li>
-            <a href="">DASHBOARD</a>
+            <a href="{{route('adminpanel')}}">DASHBOARD</a>
         </li>
         <li>
-            <a href="">PRODUCTS</a>
+            <a href="{{route('adminpanel.products')}}">PRODUCTS</a>
         </li>
         <li>
-            <a href="">CATEGORIES</a>
+            <a href="{{route('adminpanel.categories')}}">CATEGORIES</a>
         </li>
         <li>
-            <a href="">COLORS</a>
+            <a href="{{route('adminpanel.colors')}}">COLORS</a>
         </li>
         <li>
             <a href="">ORDERS</a>
