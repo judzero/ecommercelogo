@@ -19,7 +19,7 @@
                                     <th>#</th>
                                     <th>Title</th>
                                     <th>Price</th>
-                                    <th>Colors</th>
+                                    <th>Color</th>
                                     <th>Image</th>
                                     <th>Published</th>
                                     <th>Action</th>
@@ -33,16 +33,17 @@
                                         <td>{{$product->price}}</td>
                                         <td>
                                             @foreach ($product->colors as $color)
-                                            <span class="badge" style="background: {$color->code}}">{{$color->name}}</span>
+                                            <span class="badge" style="background: {{$color->code}}">{{$color->name}}</span>
                                             @endforeach
 
                                         </td>
                                         <td>
-                                            <img src="{{asset('storage/' . $product->image)}}" style="height: 95px;">
+                                            <img src="{{asset('storage/' . $product->image)}}" style="height: 95px; border: 1px solid #000">
                                         </td>
                                         <td>{{\Carbon\Carbon::parse($product->created_at)->format('d/m/Y')}}</td>
                                         <td>
-                                           <form action="{{route('adminpanel.category.destroy', $product->id)}}" method="post">
+                                            <a href="{{route('adminpanel.products.edit', $product->id)}}" class="btn">Edit</a>
+                                           <form action="{{route('adminpanel.products.destroy', $product->id)}}" class="btn" method="post">
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">DELETE</button>
 
