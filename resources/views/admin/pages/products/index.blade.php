@@ -19,6 +19,7 @@
                                     <th>#</th>
                                     <th>Title</th>
                                     <th>Price</th>
+                                    <th>Category</th>
                                     <th>Color</th>
                                     <th>Image</th>
                                     <th>Published</th>
@@ -31,6 +32,7 @@
                                         <td>{{$product->id}}</td>
                                         <td>{{$product->title}}</td>
                                         <td>{{$product->price}}</td>
+                                        <td>{{$product->category->name}}</td>
                                         <td>
                                             @foreach ($product->colors as $color)
                                             <span class="badge" style="background: {{$color->code}}">{{$color->name}}</span>
