@@ -44,7 +44,7 @@
                                         </td>
                                         <td>{{\Carbon\Carbon::parse($product->created_at)->format('d/m/Y')}}</td>
                                         <td>
-                                            <a href="{{route('adminpanel.products.edit', $product->id)}}" class="btn">Edit</a>
+                                            <a href="{{route('adminpanel.products.edit', $product->id)}}" class="btn btn-secondary">EDIT</a>
                                            <form action="{{route('adminpanel.products.destroy', $product->id)}}" class="btn" method="post">
                                             @method('DELETE')
                                             <button type="submit" class="btn btn-danger">DELETE</button>
